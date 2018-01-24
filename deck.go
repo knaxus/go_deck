@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 // create a new type of 'deck'
@@ -35,4 +36,9 @@ func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+// function to convert a deck to string
+func (d deck) toString() string {
+	return strings.Join([]string(d), ",")
 }
