@@ -25,6 +25,11 @@ func newDeck() deck {
 	return cards
 }
 
+// function to split the deck into 2 parts, deal in hand
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
+
 // print function to list all the cards in a deck
 func (d deck) print() {
 	for i, card := range d {
