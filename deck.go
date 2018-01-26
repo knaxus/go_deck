@@ -61,6 +61,9 @@ func newDeckFromFile(fileName string) deck {
 		os.Exit(-1)
 	}
 
+	// can also return a new deck of card in case of error
+	// I'm returning showing the error and exiting
+
 	s := strings.Split(string(fileContent), ",")
 	return deck(s)
 }
